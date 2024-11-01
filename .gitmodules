@@ -1,0 +1,4 @@
+[submodule "webpack"]
+	path = webpack
+	url = git@github.com:dleged/webpack.git
+	branch = main
