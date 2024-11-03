@@ -1,1 +1,1 @@
-export default 'a-1.js';
+export default 'a1.js';

@@ -10,53 +10,33 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./app.js":
-/*!****************!*\
-  !*** ./app.js ***!
-  \****************/
+/***/ "./b.js":
+/*!**************!*\
+  !*** ./b.js ***!
+  \**************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _lib_a__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./lib/a */ \"./lib/a.js\");\n/* harmony import */ var _lib_b__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./lib/b */ \"./lib/b.js\");\n/* harmony import */ var _lib_c__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./lib/c */ \"./lib/c.js\");\n\n\n\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ('app.js');\n\n//# sourceURL=webpack:///./app.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _b1__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./b1 */ \"./b1.js\");\n\n\n\nconsole.log(`b.js -> ${_b1__WEBPACK_IMPORTED_MODULE_0__[\"default\"]}`);\n\n\n//# sourceURL=webpack:///./b.js?");
 
 /***/ }),
 
-/***/ "./lib/a.js":
-/*!******************!*\
-  !*** ./lib/a.js ***!
-  \******************/
+/***/ "./b1.js":
+/*!***************!*\
+  !*** ./b1.js ***!
+  \***************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _a1__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./a1 */ \"./lib/a1.js\");\n\n\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (`a.js -> ${_a1__WEBPACK_IMPORTED_MODULE_0__[\"default\"]}`);\n\n\n//# sourceURL=webpack:///./lib/a.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _b2__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./b2 */ \"./b2.js\");\n\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (`b-1.js -> ${_b2__WEBPACK_IMPORTED_MODULE_0__[\"default\"]}`);\n\n//# sourceURL=webpack:///./b1.js?");
 
 /***/ }),
 
-/***/ "./lib/a1.js":
-/*!*******************!*\
-  !*** ./lib/a1.js ***!
-  \*******************/
+/***/ "./b2.js":
+/*!***************!*\
+  !*** ./b2.js ***!
+  \***************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ('a-1.js');\n\n//# sourceURL=webpack:///./lib/a1.js?");
-
-/***/ }),
-
-/***/ "./lib/b.js":
-/*!******************!*\
-  !*** ./lib/b.js ***!
-  \******************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ('b.js');\n\n\n//# sourceURL=webpack:///./lib/b.js?");
-
-/***/ }),
-
-/***/ "./lib/c.js":
-/*!******************!*\
-  !*** ./lib/c.js ***!
-  \******************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ('c.js');\n\n\n//# sourceURL=webpack:///./lib/c.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ('b-2.js');\n\n//# sourceURL=webpack:///./b2.js?");
 
 /***/ })
 
@@ -120,7 +100,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module can't be inlined because the eval devtool is used.
-/******/ 	var __webpack_exports__ = __webpack_require__("./app.js");
+/******/ 	var __webpack_exports__ = __webpack_require__("./b.js");
 /******/ 	
 /******/ })()
 ;

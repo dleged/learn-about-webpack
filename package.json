@@ -1,0 +1,16 @@
+{
+  "name": "learn-about-webpack",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "module-graph": "node ./examples/module-graph/webpack.config.js",
+    "entry": "node ./examples/entry/webpack.config.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@webpack-cli/generators": "^3.0.7"
+  }
+}
