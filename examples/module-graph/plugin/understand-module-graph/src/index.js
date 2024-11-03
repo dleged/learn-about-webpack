@@ -17,15 +17,21 @@ class UnderstandModuleGraph {
 
       // 输出模块图信息
       console.log('Module Graph Information:');
-      moduleGraph._moduleMap.forEach((module) => {
-        const moduleId = module.id;
-        const moduleConnections = moduleGraph.getOutgoingConnections(module);
+
+      for(let [key,module] of moduleGraph._moduleMap){
+
+        const moduleId = key.rawRequest;
+
+        const moduleConnections = module.outgoingConnections;
         console.log(`Module ID: ${moduleId}`);
         console.log('Outgoing Connections:');
-        moduleConnections.forEach((connection) => {
+        moduleConnections?.forEach((connection) => {
           console.log(`  - Connected to Module ID: ${connection.module.id}`);
         });
-      });
+
+        console.log(`
+          `); 
+      }
 
       // 继续执行下一个插件
       callback();
