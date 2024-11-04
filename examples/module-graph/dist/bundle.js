@@ -16,7 +16,7 @@
   \****************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _lib_a__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./lib/a */ \"./lib/a.js\");\n/* harmony import */ var _lib_b__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./lib/b */ \"./lib/b.js\");\n/* harmony import */ var _lib_c__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./lib/c */ \"./lib/c.js\");\n\n\n\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ('app.js');\n\n//# sourceURL=webpack:///./app.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _lib_a__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./lib/a */ \"./lib/a.js\");\n/* harmony import */ var _lib_b__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./lib/b */ \"./lib/b.js\");\n/* harmony import */ var _lib_c__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./lib/c */ \"./lib/c.js\");\n\n\n\n\nconsole.log('start')\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ('app.js');\n\n//# sourceURL=webpack:///./app.js?");
 
 /***/ }),
 
@@ -36,7 +36,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \*******************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ('a-1.js');\n\n//# sourceURL=webpack:///./lib/a1.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ('a1.js');\n\n//# sourceURL=webpack:///./lib/a1.js?");
 
 /***/ }),
 
