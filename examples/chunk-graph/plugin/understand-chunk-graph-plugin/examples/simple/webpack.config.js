@@ -1,5 +1,5 @@
 const path = require('path');
-const ChunkGraph = require('../../src/index.js');
+const UnderstandChunkGraphPlugin = require('../../src/index.js');
 
 module.exports = {
   entry: './src/index.js',
@@ -8,6 +8,6 @@ module.exports = {
     filename: '[name].chunk.js',
   },
   plugins: [
-    new ChunkGraph()
+    new UnderstandChunkGraphPlugin()
   ]
 };

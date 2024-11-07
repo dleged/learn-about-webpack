@@ -6,7 +6,8 @@
   "scripts": {
     "module-graph": "node ./examples/module-graph/webpack.config.js",
     "entry": "node ./examples/entry/webpack.config.js",
-    "ast": "node ./examples/ast/webpack.config.js"
+    "ast": "node ./examples/ast/webpack.config.js",
+    "chunk-graph": "node ./examples/chunk-graph/webpack.config.js"
   },
   "keywords": [],
   "author": "",

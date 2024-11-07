@@ -1,18 +1,18 @@
 const path = require("path");
 const webpack = require('../../webpack/lib/webpack');
-const UnderstandChunkGraphPlugin = require('./plugin/understand-chunk-module-plugin/src/index');
+const UnderstandChunkGraphPlugin = require('./plugin/understand-chunk-graph-plugin/src/index');
 
 const config = {
   context: path.join(__dirname),
   mode: 'development',
   entry: {
-    foo: ['./a.js','b.js'],
+    foo: ['./a.js','./b.js'],
 		bar: ['./c.js']
   },
   output: {
     path: path.join(__dirname,"dist"),
   },
-	plugin: [
+	plugins: [
 		new UnderstandChunkGraphPlugin()
 	]
 }
