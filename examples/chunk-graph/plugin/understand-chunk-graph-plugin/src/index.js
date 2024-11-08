@@ -1,53 +1,44 @@
-/**
- * See the webpack docs for more information about plugins:
- * https://webpack.js.org/contribute/writing-a-plugin/#basic-plugin-architecture
- */
 const path = require('path');
 const printWithLeftPadding = (message, paddingLength) => console.log(message.padStart(message.length + paddingLength));
 
 class UnderstandChunkGraphPlugin {
   apply(compiler) {
-
     const className = this.constructor.name;
     compiler.hooks.compilation.tap(className, compilation => {
       compilation.hooks.afterChunks.tap(className, chunks => {
 
+        const { entrypoints } = compilation;// EntryPoint's
 
-        const { entrypoints } = compilation;
-
-        // More about the `chunkMap`(<Chunk, ChunkGraphChunk>): https://github.com/webpack/webpack/blob/main/lib/ChunkGraph.js#L226-L227
         // comilation - chunkGraph -> _chunks -> chunkMap 
         //              chunkGraph ->  chunks -> chunksGraphchunk
         const { chunkGraph: { _chunks: chunkMap } } = compilation;
 
         const printChunkGroupsInformation = (chunkGroup, paddingLength) => {
+        
           printWithLeftPadding(`Current ChunkGroup's name: ${chunkGroup.name}; parent group: ${chunkGroup.getParents()[0]?.name}`, paddingLength);
+          
           printWithLeftPadding(` Is current ChunkGroup an EntryPoint? - ${chunkGroup.constructor.name === 'Entrypoint'}`, paddingLength);
 
-          // `chunkGroup.chunks` - a `ChunkGroup` can contain one or mode chunks.
-          const allModulesInChunkGroup = chunkGroup.chunks
+          // 2. chunkGroup.chunks - 一个 `ChunkGroup` 包含一到多个 chunk.
+          const allModulesInChunkGroup = chunkGroup.chunks // chunkGraphchunk - 描述 chunk 和 模块的关系
             .flatMap(c => {
-              // Using the information stored in the `ChunkGraph`
-              // in order to get the modules contained by a single chunk.
-              const associatedGraphChunk = chunkMap.get(c);
+              // 从 chunkGraph._chunks 获取储存的信息
+              const associatedGraphChunk = chunkMap.get(c); // _chunks.get(chunk)
 
-              // This includes the *entry modules* as well.
-              // Using the spread operator because `.modules` is a Set in this case.
-              return [...associatedGraphChunk.modules];
+              // 3. 块全部所依赖的模块
+              return [...associatedGraphChunk.modules]; 
             })
-            // The resource of a module is an absolute path and
-            // we're only interested in the file name associated with
-            // our module.
-            .map(module => path.basename(module.resource));
+            .map(module => path.basename(module.resource)); // 得到模块名称
+            
           printWithLeftPadding(` The modules that belong to this chunk group: ${allModulesInChunkGroup.join(', ')}`, paddingLength);
 
           console.log('\n');
 
-          // A `ChunkGroup` can have children `ChunkGroup`s.
+          // 深度便利 chunkGroup 的 children
           [...chunkGroup._children].forEach(childChunkGroup => printChunkGroupsInformation(childChunkGroup, paddingLength + 3));
         };
 
-        // Traversing the `ChunkGraph` in a DFS manner.
+        // 1. 深度优先遍历ChunkGraph
         for (const [entryPointName, entryPoint] of entrypoints) {
           printChunkGroupsInformation(entryPoint, 0);
         }
@@ -57,3 +48,5 @@ class UnderstandChunkGraphPlugin {
 }
 
 module.exports = UnderstandChunkGraphPlugin;
+
+
